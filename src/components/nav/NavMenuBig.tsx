@@ -1,8 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {PATH} from "../../common/Routes";
 import style from "./Nav.module.css";
-import photo from "../../common/img/logo.png";
+
 
 type PhotosType ={
     big: string
@@ -14,13 +13,13 @@ type ItemType ={
     title: string
 }
 
-const NavMenuSmall = (props:any) => {
+const NavMenuBig = (props:any) => {
 console.log(props.item)
     return (
         <div>
                 {props.item.map((item:ItemType) => {
                     return <div>
-                        <img className={style.photo} src={item.photos.small}/>
+                        <img className={style.photo} src={item.photos.big}/>
                         <NavLink to={item.href} className={style.link} activeStyle={{
                            color: "#FB2E86"
                         }}>{item.title}</NavLink>
@@ -84,5 +83,4 @@ console.log(props.item)
     );
 };
 
-export default NavMenuSmall;
-{/*<a href={item.href} className={style.link}>{item.title}</a>*/}
+export default NavMenuBig;

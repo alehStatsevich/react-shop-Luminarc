@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer";
 import Contact from "../components/Contact";
 import Guarantee from "../components/Guarantee";
 import Reviews from "../components/Reviews";
-import NavMenuSmall from "../components/nav/NavMenuSmall";
+import NavMenuBig from "../components/nav/NavMenuBig";
 import Product from "../components/product/Product";
 import Product1 from "../components/product/Product1";
 import Product2 from "../components/product/Product2";
@@ -24,23 +24,38 @@ import Product12 from "../components/product/Product12";
 import Product14 from "../components/product/Product14";
 import Product13 from "../components/product/Product13";
 import Product15 from "../components/product/Product15";
-import DinnerSets from "../common/img/image 6 (15).png";
-import TeaSets from "../common/img/image 6 (14).png";
-import Plates from "../common/img/image 6 (13).png";
-import SaladBowls from "../common/img/image 6 (12).png";
-import Herringbirds from "../common/img/image 6 (11).png";
-import WineGlasses from "../common/img/image 6 (10).png";
-import ShotGlasses from "../common/img/image 6 (9).png";
-import Mugs from "../common/img/image 6 (8).png";
-import SoupBowls from "../common/img/image 6 (7).png";
-import HeatResistantCookware from "../common/img/image 6 (6).png";
-import Containers from "../common/img/image 6 (5).png";
-import BulkCans from "../common/img/image 6 (4).png";
-import DrinkingSets from "../common/img/image 6 (3).png";
-import Jugs from "../common/img/image 6 (2).png";
-import Shelves from "../common/img/image 6 (1).png";
-import ChildrenTableware from "../common/img/image 6.png"
-import ff from "../common/img/image 6 (1).png"
+import DinnerSets from "./imgSmallMenu/image 6 (15).png";
+import TeaSets from "./imgSmallMenu/image 6 (14).png";
+import Plates from "./imgSmallMenu/image 6 (13).png";
+import SaladBowls from "./imgSmallMenu/image 6 (12).png";
+import Herringbirds from "./imgSmallMenu/image 6 (11).png";
+import WineGlasses from "./imgSmallMenu/image 6 (10).png";
+import ShotGlasses from "./imgSmallMenu/image 6 (9).png";
+import Mugs from "./imgSmallMenu/image 6 (8).png";
+import SoupBowls from "./imgSmallMenu/image 6 (7).png";
+import HeatResistantCookware from "./imgSmallMenu/image 6 (6).png";
+import Containers from "./imgSmallMenu/image 6 (5).png";
+import BulkCans from "./imgSmallMenu/image 6 (4).png";
+import DrinkingSets from "./imgSmallMenu/image 6 (3).png";
+import Jugs from "./imgSmallMenu/image 6 (2).png";
+import Shelves from "./imgSmallMenu/image 6 (1).png";
+import ChildrenTableware from "./imgSmallMenu/image 6.png";
+import DinnerSetsB from "../common/imgBigMenu/Rectangle 6.png";
+import TeaSetsB from "../common/imgBigMenu/Rectangle 6 (1).png";
+import PlatesB from "../common/imgBigMenu/Rectangle 6 (2).png";
+import SaladBowlsB from "../common/imgBigMenu/Rectangle 6 (3).png";
+import HerringbirdsB from "../common/imgBigMenu/Rectangle 6 (7).png";
+import WineGlassesB from "../common/imgBigMenu/Rectangle 6 (6).png";
+import ShotGlassesB from "../common/imgBigMenu/Rectangle 6 (5).png";
+import MugsB from "../common/imgBigMenu/Rectangle 6 (4).png";
+import SoupBowlsB from "../common/imgBigMenu/Rectangle 6 (11).png";
+import HeatResistantCookwareB from "../common/imgBigMenu/Rectangle 6 (10).png";
+import ContainersB from "../common/imgBigMenu/Rectangle 6 (9).png";
+import BulkCansB from "../common/imgBigMenu/Rectangle 6 (8).png";
+import DrinkingSetsB from "../common/imgBigMenu/Rectangle 6 (15).png"
+import JugsB from "../common/imgBigMenu/Rectangle 6 (14).png";
+import ShelvesB from "../common/imgBigMenu/Rectangle 6 (13).png";
+import ChildrenTablewareB from "../common/imgBigMenu/Rectangle 6 (12).png";
 
 export const PATH = {
     HOME: '/home',
@@ -68,29 +83,29 @@ export const PATH = {
 }
 
 const item = [
-    {title: "Сервизы столовые", href: "/product", photos: {big: ff, small: DinnerSets}},
-    {title: "Сервизы чайные", href: "/product1", photos: {big: ff, small: TeaSets}},
-    {title: "Тарелки", href: "/product2", photos: {big: ff, small: Plates}},
-    {title: "Салатники", href: "/product3", photos: {big: ff, small: SaladBowls}},
-    {title: "Блюда / Селедочницы", href: "/product4", photos: {big: ff, small: Herringbirds}},
-    {title: "Бокалы / Фужеры", href: "/product5", photos: {big: ff, small: WineGlasses}},
-    {title: "Стаканы / Рюмки", href: "/product6", photos: {big: ff, small: ShotGlasses}},
-    {title: "Кружки", href: "/product7", photos: {big: ff, small: Mugs}},
-    {title: "Супницы / Бульонницы", href: "/product8", photos: {big: ff, small: SoupBowls}},
-    {title: "Жаропрочная посуда", href: "/product9", photos: {big: ff, small: HeatResistantCookware}},
-    {title: "Контейнеры стеклянные", href: "/product10", photos: {big: ff, small: Containers}},
-    {title: "Банки для сыпучих", href: "/product11", photos: {big: ff, small: BulkCans}},
-    {title: "Питьевые наборы", href: "/product12", photos: {big: ff, small: DrinkingSets}},
-    {title: "Кувшины", href: "/product13", photos: {big: ff, small: Jugs}},
-    {title: "Этажерки / Меажницы", href: "/product14", photos: {big: ff, small: Shelves}},
-    {title: "Детская посуда", href: "/product15", photos: {big: ff, small: ChildrenTableware}}
+    {title: "Сервизы столовые", href: "/product", photos: {big: DinnerSetsB, small: DinnerSets}},
+    {title: "Сервизы чайные", href: "/product1", photos: {big: TeaSetsB, small: TeaSets}},
+    {title: "Тарелки", href: "/product2", photos: {big: PlatesB, small: Plates}},
+    {title: "Салатники", href: "/product3", photos: {big: SaladBowlsB, small: SaladBowls}},
+    {title: "Блюда / Селедочницы", href: "/product4", photos: {big: HerringbirdsB, small: Herringbirds}},
+    {title: "Бокалы / Фужеры", href: "/product5", photos: {big: WineGlassesB, small: WineGlasses}},
+    {title: "Стаканы / Рюмки", href: "/product6", photos: {big: ShotGlassesB, small: ShotGlasses}},
+    {title: "Кружки", href: "/product7", photos: {big: MugsB, small: Mugs}},
+    {title: "Супницы / Бульонницы", href: "/product8", photos: {big: SoupBowlsB, small: SoupBowls}},
+    {title: "Жаропрочная посуда", href: "/product9", photos: {big: HeatResistantCookwareB, small: HeatResistantCookware}},
+    {title: "Контейнеры стеклянные", href: "/product10", photos: {big: ContainersB, small: Containers}},
+    {title: "Банки для сыпучих", href: "/product11", photos: {big: BulkCansB, small: BulkCans}},
+    {title: "Питьевые наборы", href: "/product12", photos: {big: DrinkingSetsB, small: DrinkingSets}},
+    {title: "Кувшины", href: "/product13", photos: {big: JugsB, small: Jugs}},
+    {title: "Этажерки / Меажницы", href: "/product14", photos: {big: ShelvesB, small: Shelves}},
+    {title: "Детская посуда", href: "/product15", photos: {big: ChildrenTablewareB, small: ChildrenTableware}}
 ]
 
 const Routes = () => {
     return (
         <div>
             <Header/>
-            <NavMenuSmall item={item}/>
+            <NavMenuBig item={item}/>
             <Switch>
                 <Route path={'/'} exact render={() => <Redirect to={PATH.HOME}/>}/>
                 <Route path={PATH.HOME} render={() => <Home/>}/>

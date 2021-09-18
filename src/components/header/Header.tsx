@@ -14,7 +14,7 @@ const Header = () => {
                 <p>График работы:ежедневно с 9.00 до 21.00</p>
                 <img className={style.photo} src={photo} alt="photo"/>
             </div>
-            {/*<NavMenuSmall/>*/}
+            {/*<NavMenuBig/>*/}
         </div>
     );
 };
