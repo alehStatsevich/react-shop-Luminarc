@@ -12,8 +12,11 @@ type ItemType ={
     photos:PhotosType
     title: string
 }
+export type ItemsType = {
+    item: Array<ItemType>
+}
+const NavMenuBig = (props:ItemsType) => {
 
-const NavMenuBig = (props:any) => {
 console.log(props.item)
     return (
         <div>

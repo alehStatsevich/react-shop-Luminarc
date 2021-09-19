@@ -56,6 +56,9 @@ import DrinkingSetsB from "../common/imgBigMenu/Rectangle 6 (15).png"
 import JugsB from "../common/imgBigMenu/Rectangle 6 (14).png";
 import ShelvesB from "../common/imgBigMenu/Rectangle 6 (13).png";
 import ChildrenTablewareB from "../common/imgBigMenu/Rectangle 6 (12).png";
+import Compare from "../components/header/Compare";
+import Favorites from "../components/header/Favorites";
+import Basket from "../components/header/Basket";
 
 export const PATH = {
     HOME: '/home',
@@ -79,7 +82,9 @@ export const PATH = {
     PRODUCT13: '/product13',
     PRODUCT14: '/product14',
     PRODUCT15: '/product15',
-
+    BASKET:'/basket',
+    COMPARE:'/compare',
+    FAVORITES:'/favorites'
 }
 
 const item = [
@@ -105,10 +110,10 @@ const Routes = () => {
     return (
         <div>
             <Header/>
-            <NavMenuBig item={item}/>
+            {/*<NavMenuBig item={item}/>*/}
             <Switch>
                 <Route path={'/'} exact render={() => <Redirect to={PATH.HOME}/>}/>
-                <Route path={PATH.HOME} render={() => <Home/>}/>
+                <Route path={PATH.HOME} render={() => <Home item={item}/>}/>
                 <Route path={PATH.DELIVERY} render={() => <Delivery/>}/>
                 <Route path={PATH.CONTACT} render={() => <Contact/>}/>
                 <Route path={PATH.GUARANTEE} render={() => <Guarantee/>}/>
@@ -130,6 +135,10 @@ const Routes = () => {
                 <Route path={PATH.PRODUCT13} render={() => <Product13/>}/>
                 <Route path={PATH.PRODUCT14} render={() => <Product14/>}/>
                 <Route path={PATH.PRODUCT15} render={() => <Product15/>}/>
+                {/*basketmenu*/}
+                <Route path={PATH.BASKET} render={() => <Basket/>}/>
+                <Route path={PATH.FAVORITES} render={() => <Favorites/>}/>
+                <Route path={PATH.COMPARE} render={() => <Compare/>}/>
             </Switch>
             <Footer/>
         </div>

@@ -1,9 +1,10 @@
 import React from 'react';
+import NavMenuBig, {ItemsType} from "./nav/NavMenuBig";
 
-const Home = () => {
+const Home = (props:ItemsType) => {
     return (
         <div>
-            о магазине
+            <NavMenuBig item={props.item}/>
         </div>
     );
 };

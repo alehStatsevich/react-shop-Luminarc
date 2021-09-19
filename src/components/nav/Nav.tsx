@@ -6,7 +6,7 @@ import style from "./Nav.module.css"
 
 const Nav = () => {
     return (
-        <div>
+        <div className={style.nav}>
             <NavLink to={PATH.HOME}   className={style.link} activeStyle={{
                 color: "#FB2E86"
             }}>О Магазине</NavLink>
