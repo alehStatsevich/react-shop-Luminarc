@@ -1,20 +1,43 @@
-.header{
+.header {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.tel{
+
+.tel {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
 .blockLink {
     width: 100%;
     height: 54px;
     background-color: #EF3D89;
+
 }
+
 .banner {
     width: 100%;
+    min-height: 700px;
+    background-image: url('../../common/img/baner.png');
+}
+
+.link {
+    height: 54px;
+    width: 136px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.burger {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+
 }

@@ -6,3 +6,38 @@
     padding: 10px;
     text-decoration: none;
 }
+
+.btm_m {
+    height: 54px;
+}
+
+.contact {
+    width: 100px;
+    height: 100px;
+    transform: translateX(-400%);
+
+}
+
+.active {
+    transform: translateX(0);
+    background-color: white;
+    height: 275px;
+    min-width: 100%;
+    transition: all 0.2s;
+}
+
+.NavSmallMenu {
+    display: flex;
+    height: 275px;
+    min-width: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: all 0.4s;
+}
+
+.smallMenu {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}

@@ -109,8 +109,7 @@ const item = [
 const Routes = () => {
     return (
         <div>
-            <Header/>
-            {/*<NavMenuBig item={item}/>*/}
+            <Header item={item}/>
             <Switch>
                 <Route path={'/'} exact render={() => <Redirect to={PATH.HOME}/>}/>
                 <Route path={PATH.HOME} render={() => <Home item={item}/>}/>
@@ -139,6 +138,7 @@ const Routes = () => {
                 <Route path={PATH.BASKET} render={() => <Basket/>}/>
                 <Route path={PATH.FAVORITES} render={() => <Favorites/>}/>
                 <Route path={PATH.COMPARE} render={() => <Compare/>}/>
+                {/*menuCenter*/}
             </Switch>
             <Footer/>
         </div>

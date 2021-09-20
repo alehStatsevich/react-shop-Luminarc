@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Nav from "../nav/Nav";
 import style from "./Header.module.css";
 import photo from "../../common/img/logo.png";
 import BasketMenu from "./BasketMenu";
 import styleContainer from "../../common/Conteiner.module.css";
-import banner from "../../common/img/baner.png"
+import NavMenuCenter from "../nav/NavMenuCenter";
+import {NavLink} from "react-router-dom";
+import {PATH} from "../../common/Routes";
+import burger from "../../common/img/burger.png";
 
-const Header = () => {
+const Header = (props:any) => {
+    const [menuActive,setMenuActive]=useState(false)
+
     return (
         <div>
             <Nav/>
@@ -20,9 +25,23 @@ const Header = () => {
                 <BasketMenu/>
             </div>
             <div className={style.blockLink}>
-
+                <div className={`${styleContainer.container} ${style.header}`}>
+                <NavLink to={PATH.HOME} onClick={()=>setMenuActive(!menuActive)}  className={style.link}
+                         activeStyle={{
+               background: "#FF57AB"
+                }}>
+                    <img className={style.burger} src={burger} alt="burger"/>
+                    Каталог</NavLink>
+                </div>
             </div>
-            <img className={style.banner} src={banner} alt="banner"/>
+            <div className={style.banner}>
+                <div className={styleContainer.container}>
+                <NavMenuCenter active={menuActive}
+                               setActive={setMenuActive}
+                               item={props.item}/>
+
+            </div>  </div>
+
         </div>
     );
 };

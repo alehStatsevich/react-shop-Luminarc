@@ -7,7 +7,7 @@ type PhotosType ={
     big: string
     small:string
 }
-type ItemType ={
+export type ItemType ={
     href:string
     photos:PhotosType
     title: string
