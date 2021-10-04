@@ -16,14 +16,12 @@ export type ItemsType = {
     item: Array<ItemType>
 }
 const NavMenuBig = (props:ItemsType) => {
-
-console.log(props.item)
     return (
-        <div>
+        <div className={style.NavMenuBig}>
                 {props.item.map((item:ItemType) => {
-                    return <div>
+                    return <div className={style.bigLink}>
                         <img className={style.photo} src={item.photos.big}/>
-                        <NavLink to={item.href} className={style.link} activeStyle={{
+                        <NavLink to={item.href} className={style.linkBig} activeStyle={{
                            color: "#FB2E86"
                         }}>{item.title}</NavLink>
                     </div>

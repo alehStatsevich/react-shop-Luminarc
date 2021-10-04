@@ -8,7 +8,7 @@ import NavMenuCenter from "../nav/NavMenuCenter";
 import {NavLink} from "react-router-dom";
 import {PATH} from "../../common/Routes";
 import burger from "../../common/img/burger.png";
-
+import search from "../../common/img/search icon.svg"
 const Header = (props:any) => {
     const [menuActive,setMenuActive]=useState(false)
 
@@ -32,6 +32,26 @@ const Header = (props:any) => {
                 }}>
                     <img className={style.burger} src={burger} alt="burger"/>
                     Каталог</NavLink>
+                    <NavLink to={PATH.COLLECTIONS} className={style.link}
+                             activeStyle={{
+                                 background: "#FF57AB"
+                             }}>Коллекции</NavLink>
+                    <NavLink to={PATH.VIDEOREVIEWS} className={style.link}
+                             activeStyle={{
+                                 background: "#FF57AB"
+                             }}>Видеообзоры</NavLink>
+                    <NavLink to={PATH.LUMINARC} className={style.link}
+                             activeStyle={{
+                                 background: "#FF57AB"
+                             }}>О Люминарк</NavLink>
+                    <NavLink to={PATH.COLORSELECTIONS} className={style.link}
+                             activeStyle={{
+                                 background: "#FF57AB"
+                             }}>Цветовые подборки</NavLink>
+                    <div className={style.blockSearch}>
+                        <input type="text" placeholder="Поиск по сайту" className={style.search}/>
+                        <img className={style.searchIcon} src={search} alt="search"/>
+                    </div>
                 </div>
             </div>
             <div className={style.banner}>

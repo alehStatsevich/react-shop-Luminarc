@@ -41,3 +41,21 @@
     align-content: center;
     align-items: center;
 }
+.NavMenuBig{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.bigLink{
+    display: flex;
+    flex-direction: column;
+}
+.linkBig{
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    bottom: 15px;
+}
+
+

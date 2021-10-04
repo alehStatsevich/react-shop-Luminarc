@@ -3,14 +3,13 @@ import style from "./Nav.module.css";
 import NavSmallMenu from "./NavSmallMenu";
 
 
-
-const NavMenuCenter = (props:any) => {
-    const {active,setActive} = props;
+const NavMenuCenter = (props: any) => {
+    const {active, setActive} = props;
     console.log(props.item)
     return (
-        <div className={active ? style.active : style.contact} onClick={()=>setActive(false)}>
+        <div className={active ? style.active : style.contact} onClick={() => setActive(false)}>
 
-    <NavSmallMenu item={props.item}/>
+            <NavSmallMenu item={props.item}/>
 
         </div>
     );

@@ -7,7 +7,6 @@ import Footer from "../components/footer/Footer";
 import Contact from "../components/Contact";
 import Guarantee from "../components/Guarantee";
 import Reviews from "../components/Reviews";
-import NavMenuBig from "../components/nav/NavMenuBig";
 import Product from "../components/product/Product";
 import Product1 from "../components/product/Product1";
 import Product2 from "../components/product/Product2";
@@ -59,6 +58,10 @@ import ChildrenTablewareB from "../common/imgBigMenu/Rectangle 6 (12).png";
 import Compare from "../components/header/Compare";
 import Favorites from "../components/header/Favorites";
 import Basket from "../components/header/Basket";
+import Collections from "../components/Collections";
+import VideoReviews from "../components/VideoReviews";
+import Luminarc from "../components/Luminarc";
+import ColorSelections from "../components/ColorSelections";
 
 export const PATH = {
     HOME: '/home',
@@ -84,7 +87,11 @@ export const PATH = {
     PRODUCT15: '/product15',
     BASKET:'/basket',
     COMPARE:'/compare',
-    FAVORITES:'/favorites'
+    FAVORITES:'/favorites',
+    COLLECTIONS:'/Collections',
+    VIDEOREVIEWS:'/VideoReviews',
+    LUMINARC:'/Luminarc',
+    COLORSELECTIONS:'/ColorSelections',
 }
 
 const item = [
@@ -139,6 +146,10 @@ const Routes = () => {
                 <Route path={PATH.FAVORITES} render={() => <Favorites/>}/>
                 <Route path={PATH.COMPARE} render={() => <Compare/>}/>
                 {/*menuCenter*/}
+                <Route path={PATH.COLLECTIONS} render={() => < Collections/>}/>
+                <Route path={PATH.VIDEOREVIEWS} render={() => <VideoReviews/>}/>
+                <Route path={PATH.LUMINARC} render={() => <Luminarc/>}/>
+                <Route path={PATH.COLORSELECTIONS} render={() => <ColorSelections/>}/>
             </Switch>
             <Footer/>
         </div>
