@@ -3,7 +3,7 @@ import {appReducer} from "./app-reducer";
 
 
 const rootReducer = combineReducers({
-    // products: appReducer
+    products: appReducer
 })
 
 export const store = createStore(rootReducer);

@@ -7,8 +7,8 @@ import Footer from "../components/footer/Footer";
 import Contact from "../components/Contact";
 import Guarantee from "../components/Guarantee";
 import Reviews from "../components/Reviews";
-import Product from "../components/product/Product";
-import Product1 from "../components/product/Product1";
+import DinnerSets1 from "../components/product/DinnerSets1";
+import TeaSets2 from "../components/product/TeaSets2";
 import Product2 from "../components/product/Product2";
 import Product3 from "../components/product/Product3";
 import Product4 from "../components/product/Product4";
@@ -69,29 +69,29 @@ export const PATH = {
     CONTACT: '/contact',
     GUARANTEE: '/guarantee',
     REVIEWS: '/reviews',
-    PRODUCT: '/product',
-    PRODUCT1: '/product1',
-    PRODUCT2: '/product2',
-    PRODUCT3: '/product3',
-    PRODUCT4: '/product4',
-    PRODUCT5: '/product5',
-    PRODUCT6: '/product6',
-    PRODUCT7: '/product7',
-    PRODUCT8: '/product8',
-    PRODUCT9: '/product9',
-    PRODUCT10: '/product10',
-    PRODUCT11: '/product11',
-    PRODUCT12: '/product12',
-    PRODUCT13: '/product13',
-    PRODUCT14: '/product14',
-    PRODUCT15: '/product15',
-    BASKET:'/basket',
-    COMPARE:'/compare',
-    FAVORITES:'/favorites',
-    COLLECTIONS:'/Collections',
-    VIDEOREVIEWS:'/VideoReviews',
-    LUMINARC:'/Luminarc',
-    COLORSELECTIONS:'/ColorSelections',
+    PRODUCT: '/products/:title',
+    // PRODUCT1: '/product1',
+    // PRODUCT2: '/product2',
+    // PRODUCT3: '/product3',
+    // PRODUCT4: '/product4',
+    // PRODUCT5: '/product5',
+    // PRODUCT6: '/product6',
+    // PRODUCT7: '/product7',
+    // PRODUCT8: '/product8',
+    // PRODUCT9: '/product9',
+    // PRODUCT10: '/product10',
+    // PRODUCT11: '/product11',
+    // PRODUCT12: '/product12',
+    // PRODUCT13: '/product13',
+    // PRODUCT14: '/product14',
+    // PRODUCT15: '/product15',
+    BASKET: '/basket',
+    COMPARE: '/compare',
+    FAVORITES: '/favorites',
+    COLLECTIONS: '/Collections',
+    VIDEOREVIEWS: '/VideoReviews',
+    LUMINARC: '/Luminarc',
+    COLORSELECTIONS: '/ColorSelections',
 }
 
 const item = [
@@ -125,22 +125,24 @@ const Routes = () => {
                 <Route path={PATH.GUARANTEE} render={() => <Guarantee/>}/>
                 <Route path={PATH.REVIEWS} render={() => <Reviews/>}/>
                 {/*столовый сервиз*/}
-                <Route path={PATH.PRODUCT} render={() => <Product/>}/>
-                <Route path={PATH.PRODUCT1} render={() => <Product1/>}/>
-                <Route path={PATH.PRODUCT2} render={() => <Product2/>}/>
-                <Route path={PATH.PRODUCT3} render={() => <Product3/>}/>
-                <Route path={PATH.PRODUCT4} render={() => <Product4/>}/>
-                <Route path={PATH.PRODUCT5} render={() => <Product5/>}/>
-                <Route path={PATH.PRODUCT6} render={() => <Product6/>}/>
-                <Route path={PATH.PRODUCT7} render={() => <Product7/>}/>
-                <Route path={PATH.PRODUCT8} render={() => <Product8/>}/>
-                <Route path={PATH.PRODUCT9} render={() => <Product9/>}/>
-                <Route path={PATH.PRODUCT10} render={() => <Product10/>}/>
-                <Route path={PATH.PRODUCT11} render={() => <Product11/>}/>
-                <Route path={PATH.PRODUCT12} render={() => <Product12/>}/>
-                <Route path={PATH.PRODUCT13} render={() => <Product13/>}/>
-                <Route path={PATH.PRODUCT14} render={() => <Product14/>}/>
-                <Route path={PATH.PRODUCT15} render={() => <Product15/>}/>
+                <Route path={PATH.PRODUCT} render={() => <Product2/>}/>
+                {/*<Route path={'/rrr'} render={() => <Product2/>}/>*/}
+                {/*<Route path={PATH.PRODUCT} render={() => <DinnerSets1/>}/>*/}
+                {/*<Route path={PATH.PRODUCT1} render={() => <TeaSets2/>}/>*/}
+                {/*<Route path={PATH.PRODUCT2} render={() => <Product2/>}/>*/}
+                {/*<Route path={PATH.PRODUCT3} render={() => <Product3/>}/>*/}
+                {/*<Route path={PATH.PRODUCT4} render={() => <Product4/>}/>*/}
+                {/*<Route path={PATH.PRODUCT5} render={() => <Product5/>}/>*/}
+                {/*<Route path={PATH.PRODUCT6} render={() => <Product6/>}/>*/}
+                {/*<Route path={PATH.PRODUCT7} render={() => <Product7/>}/>*/}
+                {/*<Route path={PATH.PRODUCT8} render={() => <Product8/>}/>*/}
+                {/*<Route path={PATH.PRODUCT9} render={() => <Product9/>}/>*/}
+                {/*<Route path={PATH.PRODUCT10} render={() => <Product10/>}/>*/}
+                {/*<Route path={PATH.PRODUCT11} render={() => <Product11/>}/>*/}
+                {/*<Route path={PATH.PRODUCT12} render={() => <Product12/>}/>*/}
+                {/*<Route path={PATH.PRODUCT13} render={() => <Product13/>}/>*/}
+                {/*<Route path={PATH.PRODUCT14} render={() => <Product14/>}/>*/}
+                {/*<Route path={PATH.PRODUCT15} render={() => <Product15/>}/>*/}
                 {/*basketmenu*/}
                 <Route path={PATH.BASKET} render={() => <Basket/>}/>
                 <Route path={PATH.FAVORITES} render={() => <Favorites/>}/>

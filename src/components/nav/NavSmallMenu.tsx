@@ -9,7 +9,10 @@ const NavSmallMenu = (props:ItemsType) => {
             {props.item.map((item:ItemType) => {
                 return <div className={style.smallMenu} >
                     <img className={style.photo} src={item.photos.small}/>
-                    <NavLink to={item.href} className={style.link} activeStyle={{
+                    {/*<NavLink to={item.href} className={style.link} activeStyle={{*/}
+                    {/*    color: "#FB2E86"*/}
+                    {/*}}>{item.title}</NavLink>*/}
+                    <NavLink to={`/products/${item.title}`} className={style.link} activeStyle={{
                         color: "#FB2E86"
                     }}>{item.title}</NavLink>
                 </div>
