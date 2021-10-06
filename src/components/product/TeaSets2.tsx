@@ -7,8 +7,7 @@ import TeaSetsComponent from "../productList/TeaSetsComponent";
 
 //Сервизы чайные
 const TeaSets2 = () => {
-    const products = useSelector<AppRootStateType, initialStateType>(state => state.products)
-    console.log(products)
+
     return (
         <div>
             {

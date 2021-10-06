@@ -1,8 +1,7 @@
-import React, {useCallback} from 'react';
-import {NavLink, Redirect} from "react-router-dom";
+import React from 'react';
+import {NavLink} from "react-router-dom";
 import style from "./Nav.module.css";
-import {useDispatch} from "react-redux";
-import {addProductAC} from "../../state/app-reducer";
+
 
 
 type PhotosType = {
@@ -10,28 +9,14 @@ type PhotosType = {
     small: string
 }
 export type ItemType = {
-    href: string
+    // href: string
     photos: PhotosType
     title: string
 }
 export type ItemsType = {
     item: Array<ItemType>
 }
-const NavMenuBig = (props: any) => {
-    // const dispatch = useDispatch()
-    // const addToCart = useCallback(function () {
-    //     const action = addProductAC(props.item.type)
-    //     dispatch(action)
-    // }, [])
-
-    const clickHandler =(title: string)=> {
-        debugger
-        // return <Redirect to={`/products/${title}`}/>
-        return <Redirect to={`rrr`}/>
-
-    }
-
-
+const NavMenuBig = (props: ItemsType) => {
     return (
         <div className={style.NavMenuBig}>
             {props.item.map((item: ItemType) => {

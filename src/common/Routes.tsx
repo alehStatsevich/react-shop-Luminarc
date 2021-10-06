@@ -7,22 +7,6 @@ import Footer from "../components/footer/Footer";
 import Contact from "../components/Contact";
 import Guarantee from "../components/Guarantee";
 import Reviews from "../components/Reviews";
-import DinnerSets1 from "../components/product/DinnerSets1";
-import TeaSets2 from "../components/product/TeaSets2";
-import Product2 from "../components/product/Product2";
-import Product3 from "../components/product/Product3";
-import Product4 from "../components/product/Product4";
-import Product5 from "../components/product/Product5";
-import Product6 from "../components/product/Product6";
-import Product8 from "../components/product/Product8";
-import Product7 from "../components/product/Product7";
-import Product9 from "../components/product/Product9";
-import Product10 from "../components/product/Product10";
-import Product11 from "../components/product/Product11";
-import Product12 from "../components/product/Product12";
-import Product14 from "../components/product/Product14";
-import Product13 from "../components/product/Product13";
-import Product15 from "../components/product/Product15";
 import DinnerSets from "./imgSmallMenu/image 6 (15).png";
 import TeaSets from "./imgSmallMenu/image 6 (14).png";
 import Plates from "./imgSmallMenu/image 6 (13).png";
@@ -62,6 +46,7 @@ import Collections from "../components/Collections";
 import VideoReviews from "../components/VideoReviews";
 import Luminarc from "../components/Luminarc";
 import ColorSelections from "../components/ColorSelections";
+import Product from "../components/product/Product";
 
 export const PATH = {
     HOME: '/home',
@@ -95,22 +80,54 @@ export const PATH = {
 }
 
 const item = [
-    {title: "Сервизы столовые", href: "/product", photos: {big: DinnerSetsB, small: DinnerSets}},
-    {title: "Сервизы чайные", href: "/product1", photos: {big: TeaSetsB, small: TeaSets}},
-    {title: "Тарелки", href: "/product2", photos: {big: PlatesB, small: Plates}},
-    {title: "Салатники", href: "/product3", photos: {big: SaladBowlsB, small: SaladBowls}},
-    {title: "Блюда / Селедочницы", href: "/product4", photos: {big: HerringbirdsB, small: Herringbirds}},
-    {title: "Бокалы / Фужеры", href: "/product5", photos: {big: WineGlassesB, small: WineGlasses}},
-    {title: "Стаканы / Рюмки", href: "/product6", photos: {big: ShotGlassesB, small: ShotGlasses}},
-    {title: "Кружки", href: "/product7", photos: {big: MugsB, small: Mugs}},
-    {title: "Супницы / Бульонницы", href: "/product8", photos: {big: SoupBowlsB, small: SoupBowls}},
-    {title: "Жаропрочная посуда", href: "/product9", photos: {big: HeatResistantCookwareB, small: HeatResistantCookware}},
-    {title: "Контейнеры стеклянные", href: "/product10", photos: {big: ContainersB, small: Containers}},
-    {title: "Банки для сыпучих", href: "/product11", photos: {big: BulkCansB, small: BulkCans}},
-    {title: "Питьевые наборы", href: "/product12", photos: {big: DrinkingSetsB, small: DrinkingSets}},
-    {title: "Кувшины", href: "/product13", photos: {big: JugsB, small: Jugs}},
-    {title: "Этажерки / Меажницы", href: "/product14", photos: {big: ShelvesB, small: Shelves}},
-    {title: "Детская посуда", href: "/product15", photos: {big: ChildrenTablewareB, small: ChildrenTableware}}
+    {title: "Сервизы столовые",
+        // href: "/product",
+        photos: {big: DinnerSetsB, small: DinnerSets}},
+    {title: "Сервизы чайные",
+        // href: "/product1",
+        photos: {big: TeaSetsB, small: TeaSets}},
+    {title: "Тарелки",
+        // href: "/product2",
+        photos: {big: PlatesB, small: Plates}},
+    {title: "Салатники",
+        // href: "/product3",
+        photos: {big: SaladBowlsB, small: SaladBowls}},
+    {title: "Блюда / Селедочницы",
+        // href: "/product4",
+        photos: {big: HerringbirdsB, small: Herringbirds}},
+    {title: "Бокалы / Фужеры",
+        // href: "/product5",
+        photos: {big: WineGlassesB, small: WineGlasses}},
+    {title: "Стаканы / Рюмки",
+        // href: "/product6",
+        photos: {big: ShotGlassesB, small: ShotGlasses}},
+    {title: "Кружки",
+        // href: "/product7",
+        photos: {big: MugsB, small: Mugs}},
+    {title: "Супницы / Бульонницы",
+        // href: "/product8",
+        photos: {big: SoupBowlsB, small: SoupBowls}},
+    {title: "Жаропрочная посуда",
+        // href: "/product9",
+        photos: {big: HeatResistantCookwareB, small: HeatResistantCookware}},
+    {title: "Контейнеры стеклянные",
+        // href: "/product10",
+        photos: {big: ContainersB, small: Containers}},
+    {title: "Банки для сыпучих",
+        // href: "/product11",
+        photos: {big: BulkCansB, small: BulkCans}},
+    {title: "Питьевые наборы",
+        // href: "/product12",
+        photos: {big: DrinkingSetsB, small: DrinkingSets}},
+    {title: "Кувшины",
+        // href: "/product13",
+        photos: {big: JugsB, small: Jugs}},
+    {title: "Этажерки / Меажницы",
+        // href: "/product14",
+        photos: {big: ShelvesB, small: Shelves}},
+    {title: "Детская посуда",
+        // href: "/product15",
+        photos: {big: ChildrenTablewareB, small: ChildrenTableware}}
 ]
 
 const Routes = () => {
@@ -125,12 +142,12 @@ const Routes = () => {
                 <Route path={PATH.GUARANTEE} render={() => <Guarantee/>}/>
                 <Route path={PATH.REVIEWS} render={() => <Reviews/>}/>
                 {/*столовый сервиз*/}
-                <Route path={PATH.PRODUCT} render={() => <Product2/>}/>
-                {/*<Route path={'/rrr'} render={() => <Product2/>}/>*/}
+                <Route path={PATH.PRODUCT} render={() => <Product/>}/>
+                {/*<Route path={'/rrr'} render={() => <Product/>}/>*/}
                 {/*<Route path={PATH.PRODUCT} render={() => <DinnerSets1/>}/>*/}
                 {/*<Route path={PATH.PRODUCT1} render={() => <TeaSets2/>}/>*/}
-                {/*<Route path={PATH.PRODUCT2} render={() => <Product2/>}/>*/}
-                {/*<Route path={PATH.PRODUCT3} render={() => <Product3/>}/>*/}
+                {/*<Route path={PATH.PRODUCT2} render={() => <Product/>}/>*/}
+                {/*<Route path={PATH.PRODUCT3} render={() => <ProductCards/>}/>*/}
                 {/*<Route path={PATH.PRODUCT4} render={() => <Product4/>}/>*/}
                 {/*<Route path={PATH.PRODUCT5} render={() => <Product5/>}/>*/}
                 {/*<Route path={PATH.PRODUCT6} render={() => <Product6/>}/>*/}
