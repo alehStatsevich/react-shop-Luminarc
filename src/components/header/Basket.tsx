@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 import style from "./Basket.module.css"
-import {addProductAC, deleteProductAC} from "../../state/app-reducer";
+import {addProductAC, deleteAllProductAC, deleteProductAC} from "../../state/app-reducer";
 
 
 const Basket = () => {
@@ -32,8 +32,8 @@ const Basket = () => {
                             </td>
                             <td>{`$ ${+el.product.price.priceFormatted.slice(1) * el.count}`}</td>
                             <td>
-                                <div className={style.del}>
-                                    {/*onClick={() => dispatch(deleteAllProductAC(el.product.id))}>x*/}
+                                <div className={style.del}
+                                    onClick={() => dispatch(deleteAllProductAC(el.product.id))}>x
                                 </div>
                             </td>
                         </tr>
