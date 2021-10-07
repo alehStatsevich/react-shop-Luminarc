@@ -35,9 +35,11 @@ export type initialStateType = {
 
 export const addProductBasketAC = (id: string) => ({type: 'ADD_PRODUCT_BASKET', id} as const)
 export const addProductAC = (id: string) => ({type: 'ADD_PRODUCT', id} as const)
+export const deleteProductAC = (id: string) => ({type: 'DELETE_PRODUCT', id} as const)
 export type addProductBasketType = ReturnType<typeof addProductBasketAC>
 export type addProductType = ReturnType<typeof addProductAC>
-type ActionsType = addProductBasketType|addProductType
+export type deleteProductAC = ReturnType<typeof deleteProductAC>
+type ActionsType = addProductBasketType|addProductType|deleteProductAC
 
 export const appReducer = (state = initialState, action: ActionsType): initialStateType => {
     switch (action.type) {
@@ -58,6 +60,17 @@ export const appReducer = (state = initialState, action: ActionsType): initialSt
             copyState.elementsForBasket = copyState.elementsForBasket.map(el => {
                 if (el.product.id === action.id) {
                     return {...el, count: el.count + 1}
+                } else {
+                    return el
+                }
+            })
+            return copyState
+        }
+        case 'DELETE_PRODUCT': {
+            const copyState = {...state}
+            copyState.elementsForBasket = copyState.elementsForBasket.map(el => {
+                if (el.product.id === action.id) {
+                    return {...el, count: el.count - 1}
                 } else {
                     return el
                 }

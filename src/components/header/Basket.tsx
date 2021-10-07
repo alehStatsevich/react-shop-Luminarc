@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 import style from "./Basket.module.css"
-import {addProductAC} from "../../state/app-reducer";
+import {addProductAC, deleteProductAC} from "../../state/app-reducer";
 
 
 const Basket = () => {
@@ -19,7 +19,7 @@ const Basket = () => {
                             <td>{el.product.name}</td>
                             <td className={style.blockBasket}>
                                 <div className={style.dec}
-                                     // onClick={() => dispatch(deleteProductAC(el.product.id))}
+                                     onClick={() => dispatch(deleteProductAC(el.product.id))}
                                 >-
                                 </div>
                                 <div className={style.num}>
