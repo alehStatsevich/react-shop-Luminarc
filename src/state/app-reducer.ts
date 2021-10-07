@@ -1,3 +1,7 @@
+import DinnerSets from '../common/DinnerSetsImg/images.jpg';
+import DinnerSets1 from '../common/DinnerSetsImg/images(1).jpg';
+import DinnerSets2 from '../common/DinnerSetsImg/images(2).jpg';
+
 type PriceType = {
     amount: number,
     priceFormatted: string
@@ -15,13 +19,17 @@ export type ProductsType = {
     decimal: number,
     image: any,
 }
-export type elementsType = {
+export type ProductType = {
     id: string,
     items: Array<ProductsType>
 }
+export type FF ={
+    product: ProductsType
+    count: number
+}
 
 export type initialStateType = {
-    elementsForBasket: Array<{ product: ProductsType, count: number }>
+    elementsForBasket: Array<FF>
     elements: Array<{ id: string, items: Array<ProductsType> }>
 }
 
@@ -29,12 +37,20 @@ export const addProductAC = (id: string) => ({type: 'ADD_PRODUCT', id} as const)
 export type AddProductType = ReturnType<typeof addProductAC>
 type ActionsType = AddProductType
 
-export const appReducer = (state = initialState, action: ActionsType) => {
+export const appReducer = (state = initialState, action: ActionsType): initialStateType => {
     switch (action.type) {
-        // case 'ADD_PRODUCT': {
-        //     const copyState = {...state}
-        //
-        // }
+        case 'ADD_PRODUCT': {
+            const copyState = {...state}
+            let resultElement = state.elements.find((ps) => ps.id === action.id ? {id: ps.id, items: ps.items}: {})
+            if (resultElement) {
+                let items = resultElement.items.find(it => it.id === action.id ? {id: it.id, name: it.name, price: it.price,
+                    pricePromotial: it.pricePromotial, decimal: it.decimal, image: it.image} : {} )
+                items && copyState.elementsForBasket.push({product: items, count: 1})
+            } else {
+                return copyState
+            }
+            return copyState
+        }
         default:
             return state;
     }
@@ -47,7 +63,7 @@ const initialState: initialStateType = {
             items: [
                 {
                     "id": "e859e78c-1309-40fd-92a0-efa37b9cd4ea",
-                    "name": "Super backpack",
+                    "name": "Сервиз столовый",
                     "price": {
                         "amount": 4200,
                         "priceFormatted": "$42.00"
@@ -57,21 +73,21 @@ const initialState: initialStateType = {
                         "priceFormatted": "$26.00"
                     },
                     "decimal": 2,
-                    "image": 'backpack1'
+                    "image": DinnerSets
                 },
                 {
                     "id": "f0f58263-cd0f-4a25-8205-4a89706e203a",
-                    "name": "Cheap smartwatch",
+                    "name": "Сервиз столовый",
                     "price": {
                         "amount": 14999,
                         "priceFormatted": "$149.99"
                     },
                     "decimal": 2,
-                    "image": "smartwatch2.png"
+                    "image": DinnerSets1
                 },
                 {
                     "id": "30d00737-5a93-4d59-9bea-201d30fb1d0a",
-                    "name": "Red headphones",
+                    "name": "Сервиз столовый",
                     "price": {
                         "amount": 23999,
                         "priceFormatted": "$239.99"
@@ -81,27 +97,27 @@ const initialState: initialStateType = {
                         "priceFormatted": "$220.00"
                     },
                     "decimal": 2,
-                    "image": "headphones1.png"
+                    "image": DinnerSets2
                 },
                 {
                     "id": "184d2344-061b-405d-bf8c-aab2fa578d0b",
-                    "name": "Comfortable chair",
+                    "name": "Сервиз столовый",
                     "price": {
                         "amount": 13900,
                         "priceFormatted": "$139.00"
                     },
                     "decimal": 2,
-                    "image": "chair2.png"
+                    "image": DinnerSets
                 },
                 {
                     "id": "1a14e6aa-b757-4c37-ac3e-c5f92a0adc54",
-                    "name": "Cheap smartwatch",
+                    "name": "Сервиз столовый",
                     "price": {
                         "amount": 14999,
                         "priceFormatted": "$149.99"
                     },
                     "decimal": 2,
-                    "image": "smartwatch2.png"
+                    "image": DinnerSets2
                 },
             ],
         },
@@ -117,7 +133,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "headphones2.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "7f39a9a8-4f3d-44ef-bce6-4209688754e6",
