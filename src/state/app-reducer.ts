@@ -23,23 +23,25 @@ export type ProductType = {
     id: string,
     items: Array<ProductsType>
 }
-export type FF ={
+export type ElementType ={
     product: ProductsType
     count: number
 }
 
 export type initialStateType = {
-    elementsForBasket: Array<FF>
+    elementsForBasket: Array<ElementType>
     elements: Array<{ id: string, items: Array<ProductsType> }>
 }
 
+export const addProductBasketAC = (id: string) => ({type: 'ADD_PRODUCT_BASKET', id} as const)
 export const addProductAC = (id: string) => ({type: 'ADD_PRODUCT', id} as const)
-export type AddProductType = ReturnType<typeof addProductAC>
-type ActionsType = AddProductType
+export type addProductBasketType = ReturnType<typeof addProductBasketAC>
+export type addProductType = ReturnType<typeof addProductAC>
+type ActionsType = addProductBasketType|addProductType
 
 export const appReducer = (state = initialState, action: ActionsType): initialStateType => {
     switch (action.type) {
-        case 'ADD_PRODUCT': {
+        case 'ADD_PRODUCT_BASKET': {
             const copyState = {...state}
             let resultElement = state.elements.find((ps) => ps.id === action.id ? {id: ps.id, items: ps.items}: {})
             if (resultElement) {
@@ -49,6 +51,17 @@ export const appReducer = (state = initialState, action: ActionsType): initialSt
             } else {
                 return copyState
             }
+            return copyState
+        }
+        case 'ADD_PRODUCT': {
+            const copyState = {...state}
+            copyState.elementsForBasket = copyState.elementsForBasket.map(el => {
+                if (el.product.id === action.id) {
+                    return {...el, count: el.count + 1}
+                } else {
+                    return el
+                }
+            })
             return copyState
         }
         default:

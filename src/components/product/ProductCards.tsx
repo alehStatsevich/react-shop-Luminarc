@@ -1,9 +1,9 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import style from './ProductCards.module.css';
 import photoBasket from '../../common/img/basket.png'
-import {useDispatch, useSelector} from "react-redux";
-import {addProductAC, FF} from "../../state/app-reducer";
-import {AppRootStateType} from "../../state/store";
+import {useDispatch} from "react-redux";
+import {addProductBasketAC} from "../../state/app-reducer";
+
 
 type PriceType = {
     amount: number,
@@ -29,10 +29,9 @@ export type ProductType = {
 export const ProductCards = (props: ProductType) => {
     const dispatch = useDispatch()
     const addProduct = () => {
-        const action = addProductAC(props.product.id)
+        const action = addProductBasketAC(props.product.id)
         dispatch(action)
     }
-
     return (
         <div className={style.block}>
             <div>
@@ -55,4 +54,3 @@ export const ProductCards = (props: ProductType) => {
     );
 }
 
-// export default ProductCards;
