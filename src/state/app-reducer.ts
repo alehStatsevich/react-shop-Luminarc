@@ -177,7 +177,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair3.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "de8d194a-7e5b-476a-8cb5-6b58b3405f4c",
@@ -188,7 +187,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "headphones2.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "74b607a0-a135-4852-8631-cea25df6ae72",
@@ -199,7 +197,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair4.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "5431d5df-710a-48fc-b35e-13b7c3b9e538",
@@ -210,7 +207,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "headphones2.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "37bca50a-4e40-4507-946a-c2d2f3a7ca77",
@@ -221,7 +217,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair4.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "6302f1d2-ae70-45fd-b58b-2f6804d7b5a8",
@@ -236,7 +231,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "headphones1.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "80ea4ce9-da33-4d24-b4db-45e37abb5bf5",
@@ -247,7 +241,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair3.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "cd2de511-da5c-441f-9dc6-d991b3983553",
@@ -262,7 +255,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair4.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "b1934f02-bd5b-487c-8b4a-45102d77ccf3",
@@ -273,7 +265,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair4.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "2254c925-d39f-44f4-b565-b636c905e7a3",
@@ -284,7 +275,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "smartwatch2.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "e8aa7dfb-4d85-4b88-85b4-a6c371b787ba",
@@ -295,7 +285,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair3.png",
-                    // "type": "TeaSets"
                 },
                 {
                     "id": "97fee1bc-0d4c-4f4a-9ed0-6bd2ed3090fb",
@@ -310,7 +299,6 @@ const initialState: initialStateType = {
                     },
                     "decimal": 2,
                     "image": "chair4.png",
-                    // "type": "TeaSets"
                 },
 
             ]

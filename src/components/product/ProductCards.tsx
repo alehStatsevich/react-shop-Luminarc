@@ -36,7 +36,6 @@ export const ProductCards = (props: ProductType) => {
         <div className={style.block}>
             <div>
                 <div className={style.icon}>
-                    {/*<img src={photoBasket}  className={style.basket} onClick={addToCart} alt="photoBasket"/>*/}
                     <img src={props.product.image} className={style.image}/>
                 </div>
                 <div className={style.workInfo}>

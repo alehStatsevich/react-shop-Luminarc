@@ -39,9 +39,9 @@ const Basket = () => {
                         </tr>
                     )
                 })}
-                {/*<div>*/}
-                {/*    Total ${total}*/}
-                {/*</div>*/}
+                <div>
+                    {/*Итого ${total}*/}
+                </div>
             </div> : <div>your basket empty</div>
         }
 
