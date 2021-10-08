@@ -47,14 +47,10 @@ export const appReducer = (state = initialState, action: ActionsType): initialSt
     switch (action.type) {
         case 'ADD_PRODUCT_BASKET': {
             const copyState = {...state}
-            let resultElement = state.elements.find((ps) => ps.id === action.id ? {id: ps.id, items: ps.items}: {})
-            if (resultElement) {
-                let items = resultElement.items.find(it => it.id === action.id ? {id: it.id, name: it.name, price: it.price,
-                    pricePromotial: it.pricePromotial, decimal: it.decimal, image: it.image} : {} )
-                items && copyState.elementsForBasket.push({product: items, count: 1})
-            } else {
-                return copyState
-            }
+            state.elements.forEach(e => {
+                let item = e.items.find(i => i.id === action.id);
+                item && copyState.elementsForBasket.push({ product: item, count: 1 })
+            })
             return copyState
         }
         case 'ADD_PRODUCT': {

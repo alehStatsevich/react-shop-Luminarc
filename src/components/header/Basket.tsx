@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 import style from "./Basket.module.css"
@@ -8,6 +8,15 @@ import {addProductAC, deleteAllProductAC, deleteProductAC} from "../../state/app
 const Basket = () => {
     const elementsForBasket= useSelector((state:AppRootStateType)=> state.products.elementsForBasket)
     const dispatch = useDispatch()
+
+    const [total, setTotal] = useState(0)
+    useEffect(() => {
+        const totalPrice = elementsForBasket.reduce((acc, curr) => {
+            return acc + +curr.product.price.priceFormatted.slice(1) * curr.count
+        }, 0);
+        setTotal(totalPrice)
+
+    }, [elementsForBasket])
     console.log(elementsForBasket, 'basket')
     return (<>
         {elementsForBasket.length ?
@@ -15,7 +24,7 @@ const Basket = () => {
                 {elementsForBasket.map((el) => {
                     return (
                         <tr key={el.product.id} className={style.cartBlock}>
-                            {/*<td>{el.product.image}</td>*/}
+                            <td><img src={el.product.image}/></td>
                             <td>{el.product.name}</td>
                             <td className={style.blockBasket}>
                                 <div className={style.dec}
@@ -40,12 +49,12 @@ const Basket = () => {
                     )
                 })}
                 <div>
-                    {/*Итого ${total}*/}
+                    Итого ${total}
                 </div>
             </div> : <div>your basket empty</div>
         }
 
     </>);
-};
+}
 
 export default Basket;
