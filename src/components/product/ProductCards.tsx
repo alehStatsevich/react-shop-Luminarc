@@ -3,6 +3,7 @@ import style from './ProductCards.module.css';
 import photoBasket from '../../common/img/basket.png'
 import {useDispatch} from "react-redux";
 import {addProductBasketAC} from "../../state/app-reducer";
+import styleContainer from "../../common/Conteiner.module.css";
 
 
 type PriceType = {
@@ -33,7 +34,8 @@ export const ProductCards = (props: ProductType) => {
         dispatch(action)
     }
     return (
-        <div className={style.block}>
+        <div className={style.div}>
+        <div className={style.productCardBlock}>
             <div>
                 <div className={style.icon}>
                     <img src={props.product.image} className={style.image}/>
@@ -49,6 +51,7 @@ export const ProductCards = (props: ProductType) => {
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

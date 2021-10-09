@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 import {ProductCards} from "./ProductCards";
 import {ProductsType, ProductType} from "../../state/app-reducer";
+import style from "./Product.module.css"
 
 
 const Product = () => {
@@ -14,7 +15,7 @@ const Product = () => {
         return el.id === title
     })
     return (
-        <div>
+        <div className={style.block}>
             {
                 el.items.map((el: ProductsType) => {
                     return <ProductCards product={el}/> })

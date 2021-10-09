@@ -28,7 +28,7 @@
 
 .NavSmallMenu {
     display: flex;
-    height: 275px;
+    min-height: 275px;
     min-width: 100%;
     flex-wrap: wrap;
     align-content: center;
@@ -41,17 +41,21 @@
     align-content: center;
     align-items: center;
 }
-.NavMenuBig{
+
+.NavMenuBig {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap: 40px;
     align-items: center;
+    justify-content: center;
 }
-.bigLink{
+
+.bigLink {
     display: flex;
     flex-direction: column;
 }
-.linkBig{
+
+.linkBig {
     text-decoration: none;
     position: relative;
     padding: 10px;

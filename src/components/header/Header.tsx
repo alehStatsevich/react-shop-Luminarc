@@ -28,25 +28,25 @@ const Header = (props:any) => {
                 <div className={`${styleContainer.container} ${style.header}`}>
                 <NavLink to={PATH.HOME} onClick={()=>setMenuActive(!menuActive)}  className={style.link}
                          activeStyle={{
-               background: "#FF57AB"
+                             color: "#333333"
                 }}>
                     <img className={style.burger} src={burger} alt="burger"/>
                     Каталог</NavLink>
                     <NavLink to={PATH.COLLECTIONS} className={style.link}
                              activeStyle={{
-                                 background: "#FF57AB"
+                                 color: "#333333"
                              }}>Коллекции</NavLink>
                     <NavLink to={PATH.VIDEOREVIEWS} className={style.link}
                              activeStyle={{
-                                 background: "#FF57AB"
+                                 color: "#333333"
                              }}>Видеообзоры</NavLink>
                     <NavLink to={PATH.LUMINARC} className={style.link}
                              activeStyle={{
-                                 background: "#FF57AB"
+                                 color: "#333333"
                              }}>О Люминарк</NavLink>
                     <NavLink to={PATH.COLORSELECTIONS} className={style.link}
                              activeStyle={{
-                                 background: "#FF57AB"
+                                 color: "#333333"
                              }}>Цветовые подборки</NavLink>
                     <div className={style.blockSearch}>
                         <input type="text" placeholder="Поиск по сайту" className={style.search}/>

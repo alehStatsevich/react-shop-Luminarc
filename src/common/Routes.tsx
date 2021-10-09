@@ -143,24 +143,6 @@ const Routes = () => {
                 <Route path={PATH.REVIEWS} render={() => <Reviews/>}/>
                 {/*столовый сервиз*/}
                 <Route path={PATH.PRODUCT} render={() => <Product/>}/>
-                {/*<Route path={'/rrr'} render={() => <Product/>}/>*/}
-                {/*<Route path={PATH.PRODUCT} render={() => <DinnerSets1/>}/>*/}
-                {/*<Route path={PATH.PRODUCT1} render={() => <TeaSets2/>}/>*/}
-                {/*<Route path={PATH.PRODUCT2} render={() => <Product/>}/>*/}
-                {/*<Route path={PATH.PRODUCT3} render={() => <ProductCards/>}/>*/}
-                {/*<Route path={PATH.PRODUCT4} render={() => <Product4/>}/>*/}
-                {/*<Route path={PATH.PRODUCT5} render={() => <Product5/>}/>*/}
-                {/*<Route path={PATH.PRODUCT6} render={() => <Product6/>}/>*/}
-                {/*<Route path={PATH.PRODUCT7} render={() => <Product7/>}/>*/}
-                {/*<Route path={PATH.PRODUCT8} render={() => <Product8/>}/>*/}
-                {/*<Route path={PATH.PRODUCT9} render={() => <Product9/>}/>*/}
-                {/*<Route path={PATH.PRODUCT10} render={() => <Product10/>}/>*/}
-                {/*<Route path={PATH.PRODUCT11} render={() => <Product11/>}/>*/}
-                {/*<Route path={PATH.PRODUCT12} render={() => <Product12/>}/>*/}
-                {/*<Route path={PATH.PRODUCT13} render={() => <Product13/>}/>*/}
-                {/*<Route path={PATH.PRODUCT14} render={() => <Product14/>}/>*/}
-                {/*<Route path={PATH.PRODUCT15} render={() => <Product15/>}/>*/}
-                {/*basketmenu*/}
                 <Route path={PATH.BASKET} render={() => <Basket/>}/>
                 <Route path={PATH.FAVORITES} render={() => <Favorites/>}/>
                 <Route path={PATH.COMPARE} render={() => <Compare/>}/>

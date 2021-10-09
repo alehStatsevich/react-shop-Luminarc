@@ -18,7 +18,7 @@ const Basket = () => {
 
     }, [elementsForBasket])
     console.log(elementsForBasket, 'basket')
-    return (<>
+    return (<div className={style.basket}>
         {elementsForBasket.length ?
             <div>
                 {elementsForBasket.map((el) => {
@@ -54,7 +54,7 @@ const Basket = () => {
             </div> : <div>your basket empty</div>
         }
 
-    </>);
+    </div>);
 }
 
 export default Basket;
