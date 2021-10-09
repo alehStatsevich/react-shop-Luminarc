@@ -70,3 +70,18 @@
     top: 9px;
     position: absolute;
 }
+@media screen and (max-width: 1279px) {
+    .blockSearch {
+        margin:  auto;
+    }
+}
+@media screen and (max-width: 970px) {
+    .photo {
+        margin:  auto;
+    }
+}
+@media screen and (max-width: 970px) {
+    p {
+      display: none;
+    }
+}

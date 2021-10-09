@@ -9,8 +9,9 @@ import {NavLink} from "react-router-dom";
 import {PATH} from "../../common/Routes";
 import burger from "../../common/img/burger.png";
 import search from "../../common/img/search icon.svg"
-const Header = (props:any) => {
-    const [menuActive,setMenuActive]=useState(false)
+
+const Header = (props: any) => {
+    const [menuActive, setMenuActive] = useState(false)
 
     return (
         <div>
@@ -22,16 +23,18 @@ const Header = (props:any) => {
                     <p>График работы:ежедневно с 9.00 до 21.00</p>
                 </div>
                 <img className={style.photo} src={photo} alt="photo"/>
-                <BasketMenu/>
+                <div className={style.basketMenu}>
+                    <BasketMenu/>
+                </div>
             </div>
             <div className={style.blockLink}>
                 <div className={`${styleContainer.container} ${style.header}`}>
-                <NavLink to={PATH.HOME} onClick={()=>setMenuActive(!menuActive)}  className={style.link}
-                         activeStyle={{
-                             color: "#333333"
-                }}>
-                    <img className={style.burger} src={burger} alt="burger"/>
-                    Каталог</NavLink>
+                    <NavLink to={PATH.HOME} onClick={() => setMenuActive(!menuActive)} className={style.link}
+                             activeStyle={{
+                                 color: "#333333"
+                             }}>
+                        <img className={style.burger} src={burger} alt="burger"/>
+                        Каталог</NavLink>
                     <NavLink to={PATH.COLLECTIONS} className={style.link}
                              activeStyle={{
                                  color: "#333333"
@@ -56,11 +59,12 @@ const Header = (props:any) => {
             </div>
             <div className={style.banner}>
                 <div className={styleContainer.container}>
-                <NavMenuCenter active={menuActive}
-                               setActive={setMenuActive}
-                               item={props.item}/>
+                    <NavMenuCenter active={menuActive}
+                                   setActive={setMenuActive}
+                                   item={props.item}/>
 
-            </div>  </div>
+                </div>
+            </div>
 
         </div>
     );
