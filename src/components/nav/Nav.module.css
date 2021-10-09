@@ -62,4 +62,8 @@
     bottom: 15px;
 }
 
-
+@media screen and (max-width: 930px) {
+    .active {
+        display: none;
+    }
+}

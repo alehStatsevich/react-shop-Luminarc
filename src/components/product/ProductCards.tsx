@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './ProductCards.module.css';
 import photoBasket from '../../common/img/basket.png'
 import {useDispatch} from "react-redux";
 import {addProductBasketAC} from "../../state/app-reducer";
-import styleContainer from "../../common/Conteiner.module.css";
+
 
 
 type PriceType = {
@@ -28,10 +28,12 @@ export type ProductType = {
 }
 
 export const ProductCards = (props: ProductType) => {
+    const [disable, setDisable] = useState(false);
     const dispatch = useDispatch()
     const addProduct = () => {
         const action = addProductBasketAC(props.product.id)
         dispatch(action)
+        setDisable(true)
     }
     return (
         <div className={style.div}>
@@ -42,10 +44,11 @@ export const ProductCards = (props: ProductType) => {
                 </div>
                 <div className={style.workInfo}>
                     <h3 className={style.productTitle}>{props.product.name}</h3>
+                    <h3 className={style.productTitle}>{props.product.id}</h3>
                     {props.product.pricePromotial?.priceFormatted ?
                         <span>{props.product.pricePromotial.priceFormatted}</span>
                         : <span>{props.product.price.priceFormatted}</span>}
-                    <button className={style.btn} onClick={addProduct}>
+                    <button className={style.btn} onClick={addProduct} disabled={disable} >
                         <img src={photoBasket} className={style.basket} alt="photoBasket"/>
                         В корзину
                     </button>
