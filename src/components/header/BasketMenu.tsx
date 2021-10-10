@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 import {PATH} from "../../common/Routes";
 import style from "./BasketMenu.module.css";
@@ -9,7 +9,9 @@ import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 
 const BasketMenu = () => {
-    const rt = useSelector<AppRootStateType,any>(state=> state.products.elementsForBasket)
+
+    const count = useSelector<AppRootStateType,any>(state=> state.products.elementsForBasket)
+
     return (
         <div>
             <div className={style.block}>
@@ -25,7 +27,7 @@ const BasketMenu = () => {
             </NavLink>
             <NavLink to={PATH.BASKET} className={style.link} activeStyle={{
                 color: "#FB2E86"
-            }}>{rt.length}
+            }}><span>{count.length}</span>
                 <img className={style.photo} src={basket} alt="photo"/>
             </NavLink>
             </div>

@@ -23,6 +23,7 @@ const Basket = () => {
             <div>
                 {elementsForBasket.map((el) => {
                     return (
+                        <div className={style.basketContainer}>
                         <tr key={el.product.id} className={style.cartBlock}>
                             <td><img src={el.product.image}/></td>
                             <td>{el.product.name}</td>
@@ -46,6 +47,7 @@ const Basket = () => {
                                 </div>
                             </td>
                         </tr>
+                        </div>
                     )
                 })}
                 <div>
