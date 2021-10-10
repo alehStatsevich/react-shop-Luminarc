@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../state/store";
 import style from "./Basket.module.css"
+import styles from "../../common/Conteiner.module.css"
 import {addProductAC, deleteAllProductAC, deleteProductAC} from "../../state/app-reducer";
 
 
@@ -23,7 +24,7 @@ const Basket = () => {
             <div>
                 {elementsForBasket.map((el) => {
                     return (
-                        <div className={style.basketContainer}>
+                        <div className={styles.basketProductContainer}>
                         <tr key={el.product.id} className={style.cartBlock}>
                             <td><img src={el.product.image}/></td>
                             <td>{el.product.name}</td>

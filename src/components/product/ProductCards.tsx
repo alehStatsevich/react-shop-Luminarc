@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import style from './ProductCards.module.css';
+import styles from '../../common/Conteiner.module.css'
 import photoBasket from '../../common/img/basket.png'
 import {useDispatch} from "react-redux";
 import {addProductBasketAC} from "../../state/app-reducer";
@@ -36,7 +37,7 @@ export const ProductCards = (props: ProductType) => {
         setDisable(true)
     }
     return (
-        <div className={style.div}>
+        <div className={styles.basketProductContainer}>
         <div className={style.productCardBlock}>
             <div>
                 <div className={style.icon}>
