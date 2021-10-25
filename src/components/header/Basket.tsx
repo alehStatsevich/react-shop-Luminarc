@@ -4,6 +4,7 @@ import {AppRootStateType} from "../../state/store";
 import style from "./Basket.module.css"
 import styles from "../../common/Conteiner.module.css"
 import {addProductAC, deleteAllProductAC, deleteProductAC} from "../../state/app-reducer";
+import basket from "../../common/img/Vector.png"
 
 
 const Basket = () => {
@@ -44,7 +45,8 @@ const Basket = () => {
                             <td>{`$ ${+el.product.price.priceFormatted.slice(1) * el.count}`}</td>
                             <td>
                                 <div className={style.del}
-                                    onClick={() => dispatch(deleteAllProductAC(el.product.id))}>x
+                                    onClick={() => dispatch(deleteAllProductAC(el.product.id))}>
+                                    <img src={basket}/>
                                 </div>
                             </td>
                         </tr>
