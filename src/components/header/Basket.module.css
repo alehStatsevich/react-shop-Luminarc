@@ -6,7 +6,7 @@
     width: 100%;
     display: inline-flex;
     justify-content: space-around;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
     align-items: center;
 }
 
@@ -14,16 +14,21 @@
     display: flex;
     flex-direction: row;
 }
-.inc {
-    width: 25px;
-    height: 25px;
+.decInc {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-.dec {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
+.basketImg{
+    width: 225px;
+    height: 225px;
+    border-radius: 20px;
+    margin: 20px 0;
 }
 
 .del {
@@ -35,8 +40,9 @@
 }
 
 .num {
-    width: 20px;
-    height: 20px;
-    border: 1px solid black;
-    padding: 2px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #FB2E86;
+    font-size: 25px;
+    margin: 0 20px;
 }

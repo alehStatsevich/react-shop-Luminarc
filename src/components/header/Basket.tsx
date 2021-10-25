@@ -26,17 +26,17 @@ const Basket = () => {
                     return (
                         <div className={styles.basketProductContainer}>
                         <tr key={el.product.id} className={style.cartBlock}>
-                            <td><img src={el.product.image}/></td>
+                            <td><img className={style.basketImg} src={el.product.image}/></td>
                             <td>{el.product.name}</td>
                             <td className={style.blockBasket}>
-                                <div className={style.dec}
+                                <div className={style.decInc}
                                      onClick={() => dispatch(deleteProductAC(el.product.id))}
                                 >-
                                 </div>
                                 <div className={style.num}>
                                     {el.count}
                                 </div>
-                                <div className={style.inc}
+                                <div className={style.decInc}
                                      onClick={() => dispatch(addProductAC(el.product.id))}
                                 >+
                                 </div>
